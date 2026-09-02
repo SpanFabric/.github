@@ -3,19 +3,19 @@
   "bridge_version": "manual-verification-bridge-v1",
   "repository": ".github",
   "authority_mode": "MANUAL_AUTHORITY",
-  "status": "BUILDING",
-  "previous_status": "INDEPENDENT_REVIEW_PENDING",
+  "status": "INDEPENDENT_REVIEW_PENDING",
+  "previous_status": "BUILDING",
   "transition": {
-    "from": "INDEPENDENT_REVIEW_PENDING",
-    "to": "BUILDING",
+    "from": "BUILDING",
+    "to": "INDEPENDENT_REVIEW_PENDING",
     "authority": "BUILDER"
   },
   "risk": {
     "class": "R2",
     "reason": "Initial governance/CI bootstrap; model may raise but not lower deterministic floor."
   },
-  "review_subject_digest": "1d26a6c75c8d66ba8209fe0c741f9019f38c5cf5a0a0395d367e824f18a515af",
-  "review_subject_commit": "7b4e73e9bd2f140c9e085978b3a2a7a063fa0a87",
+  "review_subject_digest": "0b552d9004b2627bfadd56fec5e9e6e9296c68aa6780b15a4cfe028deddacbcc",
+  "review_subject_commit": "01640e501006f5a37bd010702a7d8af000117707",
   "evidence": [
     {
       "id": "INITIAL-BASELINE-BOOTSTRAP-BUILDER-20260902",
@@ -52,6 +52,26 @@
       "created_at": "2026-09-02T19:27:12Z",
       "verdict": "BUILDER_GREEN",
       "active": false
+    },
+    {
+      "id": "FRESH-BREAKER-F001-F004-REMEDIATION-BUILDER-20260902",
+      "type": "BUILDER_REPORT",
+      "producer": "BUILDER",
+      "role": "BUILDER",
+      "authority": "MANUAL_AUTHORITY",
+      "commit_sha": "01640e501006f5a37bd010702a7d8af000117707",
+      "review_subject_digest": "0b552d9004b2627bfadd56fec5e9e6e9296c68aa6780b15a4cfe028deddacbcc",
+      "created_at": "2026-09-02T20:44:07Z",
+      "verdict": "BUILDER_GREEN",
+      "active": true
+    }
+  ],
+  "remediation_inputs": [
+    {
+      "kind": "EXTERNAL_FRESH_BREAKER_FINDINGS",
+      "reference": "https://github.com/SpanFabric/.github/pull/1",
+      "findings": ["F-001", "F-002", "F-003", "F-004"],
+      "status": "REMEDIATED_PENDING_FRESH_BREAKER"
     }
   ],
   "blockers": [],
@@ -63,6 +83,6 @@
   },
   "notes": [
     "The first main commit contains the Manual Verification Bridge and is the explicit bootstrap baseline.",
-    "The current R2 CI-history correction has Builder evidence and requires a fresh independent BREAKER."
+    "The confirmed external Fresh BREAKER findings F-001 through F-004 are remediation input only; this Builder report requires a new independent BREAKER."
   ]
 }
