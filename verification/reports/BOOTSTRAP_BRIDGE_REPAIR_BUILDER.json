@@ -1,0 +1,22 @@
+{
+  "id": "BOOTSTRAP-BRIDGE-REPAIR-BUILDER-20260902",
+  "type": "BUILDER_REPORT",
+  "producer": "BUILDER",
+  "role": "BUILDER",
+  "authority": "MANUAL_AUTHORITY",
+  "commit_sha": "c8bd930c0984715ac075b89a53972f5779a19f73",
+  "review_subject_digest": "a6834eb302846bc8ba8769f9c1eabae4de353045172d7a493fe49c65f14b7909",
+  "created_at": "2026-09-02T19:27:12Z",
+  "verdict": "BUILDER_GREEN",
+  "risk_class": "R2",
+  "scope": "Replace unsafe materializer-state assumption in bootstrap integrity with Manual Verification Bridge validation; make material changes re-enter BUILDING.",
+  "tests": [
+    "git diff --cached --check (pass)",
+    "python -m unittest discover -s tests/verification -p test_*.py -v (11 passed)",
+    "python scripts/verify_review_state.py --check (pass)"
+  ],
+  "limitations": [
+    "No fresh Breaker, Specialist, Owner, merge, or post-merge verdict is asserted.",
+    "GitHub branch-protection and required-review enforcement remain MANUAL_AUTHORITY settings."
+  ]
+}
