@@ -1,0 +1,21 @@
+{
+  "id": "SOLO-OWNER-GOVERNANCE-BUILDER-20261003",
+  "type": "BUILDER_REPORT",
+  "producer": "BUILDER",
+  "role": "BUILDER",
+  "authority": "MANUAL_AUTHORITY",
+  "repository": ".github",
+  "commit_sha": "ca14508cb97a4d67b128614c1a3d7fce95f48e78",
+  "review_subject_digest": "239effb4223039bf4db76ddafd22ed42ee266fc69f8d25c4549ae411a229de7b",
+  "created_at": "2026-10-03T21:34:11.7812585+02:00",
+  "verdict": "BUILDER_GREEN",
+  "lifecycle": "INDEPENDENT_REVIEW_PENDING",
+  "risk_class": "R2",
+  "scope": "Synchronize the Manual Verification Bridge lifecycle reopen and the explicit SOLO_OWNER hosting-authority contract; no workflow or hosted setting changed.",
+  "validation": {
+    "trusted_runner": {"exit_code": 0, "base": "33b283803016646af8ab8fba0334dacad1e37067", "material_file_count": 11},
+    "exact_head_ci": {"verification_gate": "SUCCESS: 37148262912", "bootstrap_integrity": "SUCCESS: 37148262908", "integrity_workflow_name": "Steward baseline integrity"},
+    "local_full_suite": "BLOCKED_ENVIRONMENT: Windows system-temp fixture teardown encountered WinError 32; no source failure was inferred and the exact-head hosted suite is recorded separately."
+  },
+  "authority_limit": "Builder evidence only; it does not create Fresh BREAKER, Owner, merge, post-merge, hosting-control, gate, or phase-completion authority."
+}
