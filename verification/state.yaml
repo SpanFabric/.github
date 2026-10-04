@@ -3,19 +3,19 @@
   "bridge_version": "manual-verification-bridge-v1",
   "repository": ".github",
   "authority_mode": "MANUAL_AUTHORITY",
-  "status": "BUILDING",
-  "previous_status": "INDEPENDENT_REVIEW_PENDING",
+  "status": "INDEPENDENT_REVIEW_PENDING",
+  "previous_status": "BUILDING",
   "transition": {
-    "from": "INDEPENDENT_REVIEW_PENDING",
-    "to": "BUILDING",
+    "from": "BUILDING",
+    "to": "INDEPENDENT_REVIEW_PENDING",
     "authority": "BUILDER"
   },
   "risk": {
     "class": "R2",
     "reason": "Initial governance/CI bootstrap; model may raise but not lower deterministic floor."
   },
-  "review_subject_digest": "780787a13e42052ad9808542bab9c8d8b32878735d9cb6fcf1ffb4fa19096406",
-  "review_subject_commit": "3a50fd2142d683f39912b946e47fb92aa723a778",
+  "review_subject_digest": "13285db53fadc4733829124d19d0b975dc38487d5d064291888f94895feaf1a0",
+  "review_subject_commit": "b59058a2f41bc2b7fe5e29a7ef85f08609d5a707",
   "evidence": [
     {
       "id": "INITIAL-BASELINE-BOOTSTRAP-BUILDER-20260902",
@@ -155,6 +155,19 @@
       "verdict": "BUILDER_GREEN",
       "active": false,
       "report_path": "verification/reports/FBR_WTR_001_002_003_REMEDIATION_BUILDER_20261004.json"
+    },
+    {
+      "id": "FBR-WTR-001-002-003-REMEDIATION-BUILDER-CI-FOLLOWUP-.GITHUB-20261004",
+      "type": "REMEDIATION",
+      "producer": "BUILDER",
+      "role": "BUILDER",
+      "authority": "MANUAL_AUTHORITY",
+      "commit_sha": "b59058a2f41bc2b7fe5e29a7ef85f08609d5a707",
+      "review_subject_digest": "13285db53fadc4733829124d19d0b975dc38487d5d064291888f94895feaf1a0",
+      "created_at": "2026-10-04T00:46:57.929Z",
+      "verdict": "BUILDER_GREEN",
+      "active": true,
+      "report_path": "verification/reports/FBR_WTR_001_002_003_REMEDIATION_BUILDER_CI_FOLLOWUP_20261004.json"
     }
   ],
   "remediation_inputs": [
@@ -198,7 +211,7 @@
       "report_path": "verification/reports/FRESH_BREAKER_WTR_001_002_003_20261004.json",
       "summary": "WSL-only PATH fallback is accepted",
       "builder_disposition": "REMEDIATED_PENDING_FRESH_BREAKER",
-      "builder_report_path": "verification/reports/FBR_WTR_001_002_003_REMEDIATION_BUILDER_20261004.json"
+      "builder_report_path": "verification/reports/FBR_WTR_001_002_003_REMEDIATION_BUILDER_CI_FOLLOWUP_20261004.json"
     },
     {
       "id": "FBR-WTR-002",
@@ -209,7 +222,7 @@
       "report_path": "verification/reports/FRESH_BREAKER_WTR_001_002_003_20261004.json",
       "summary": "Public verification-gate is skipped rather than failed after Windows prerequisite failure",
       "builder_disposition": "REMEDIATED_PENDING_FRESH_BREAKER",
-      "builder_report_path": "verification/reports/FBR_WTR_001_002_003_REMEDIATION_BUILDER_20261004.json"
+      "builder_report_path": "verification/reports/FBR_WTR_001_002_003_REMEDIATION_BUILDER_CI_FOLLOWUP_20261004.json"
     },
     {
       "id": "FBR-WTR-003",
@@ -220,7 +233,7 @@
       "report_path": "verification/reports/FRESH_BREAKER_WTR_001_002_003_20261004.json",
       "summary": "Apostrophe-containing native Windows paths are silently altered",
       "builder_disposition": "REMEDIATED_PENDING_FRESH_BREAKER",
-      "builder_report_path": "verification/reports/FBR_WTR_001_002_003_REMEDIATION_BUILDER_20261004.json"
+      "builder_report_path": "verification/reports/FBR_WTR_001_002_003_REMEDIATION_BUILDER_CI_FOLLOWUP_20261004.json"
     }
   ],
   "initial_baseline_bootstrap": {
@@ -234,6 +247,7 @@
     "The confirmed external Fresh BREAKER findings F-001 through F-004 remain historical remediation input.",
     "F-005 and F-006 have Builder remediation and technical evidence only; a new independent Fresh BREAKER is required.",
     "FBR-WTR-001/002/003 have Builder remediation bound to the new material subject. Their historical Breaker report is unchanged and inactive; findings remain OPEN pending a new independent Fresh Breaker.",
-    "Builder reopened for portable fixed-installation test fixture after Ubuntu CI exposed an environmental assumption; prior Builder report and failed CI remain historical."
+    "Builder reopened for portable fixed-installation test fixture after Ubuntu CI exposed an environmental assumption; prior Builder report and failed CI remain historical.",
+    "Portable CI-fixture followup validated locally on the new material identity; prior evidence stays inactive, independent Fresh Breaker required."
   ]
 }
