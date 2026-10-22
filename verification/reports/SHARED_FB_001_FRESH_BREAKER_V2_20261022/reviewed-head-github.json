@@ -1,0 +1,46 @@
+{
+  "branch": "fix/verification-gate-first-push-20261016",
+  "runs": [
+    {
+      "event": "pull_request",
+      "run_id": 39774722077,
+      "jobs": [
+        {
+          "id": 119810677521,
+          "name": "windows-trusted-runner",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 119813269426,
+          "name": "verification-gate",
+          "status": "completed",
+          "conclusion": "success"
+        }
+      ],
+      "html_url": "https://github.com/SpanFabric/.github/actions/runs/39774722077",
+      "name": "Verification gate",
+      "status": "completed",
+      "conclusion": "success",
+      "head_sha": "746f75e4364d7d7db00989506144573ce90cc125"
+    },
+    {
+      "event": "pull_request",
+      "run_id": 39774722150,
+      "jobs": {
+        "id": 119810677596,
+        "name": "bootstrap-integrity",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      "html_url": "https://github.com/SpanFabric/.github/actions/runs/39774722150",
+      "name": "Steward baseline integrity",
+      "status": "completed",
+      "conclusion": "success",
+      "head_sha": "746f75e4364d7d7db00989506144573ce90cc125"
+    }
+  ],
+  "base": "b13a1444757fbffc08de01476dcc32ec0117de59",
+  "repo": ".github",
+  "head": "746f75e4364d7d7db00989506144573ce90cc125"
+}
