@@ -3,12 +3,12 @@
   "bridge_version": "manual-verification-bridge-v1",
   "repository": ".github",
   "authority_mode": "MANUAL_AUTHORITY",
-  "status": "ACCEPTED",
-  "previous_status": "READY_FOR_OWNER_ACCEPTANCE",
+  "status": "POST_MERGE_VERIFIED",
+  "previous_status": "MERGED",
   "transition": {
-    "from": "READY_FOR_OWNER_ACCEPTANCE",
-    "to": "ACCEPTED",
-    "authority": "OWNER"
+    "from": "MERGED",
+    "to": "POST_MERGE_VERIFIED",
+    "authority": "POST_MERGE_WORKFLOW"
   },
   "risk": {
     "class": "R2",
@@ -300,6 +300,34 @@
       "verdict": "ACCEPTED",
       "active": true,
       "report_path": "verification/reports/OWNER_ACCEPTANCE_MISSING_PARENT_FIXTURE_20261026.json"
+    },
+    {
+      "id": "MERGE_STATE-MISSING-PARENT-FIXTURE-.GITHUB-20261026",
+      "type": "MERGE_STATE",
+      "producer": "MERGE_HOSTING_GATE",
+      "role": "MERGE_HOSTING_GATE",
+      "authority": "MANUAL_AUTHORITY",
+      "created_at": "2026-10-26T08:03:55.546993+00:00",
+      "verdict": "MERGED",
+      "commit_sha": "00bf6e758f90351a44cdede9587210022a62aa4d",
+      "merge_commit_sha": "00bf6e758f90351a44cdede9587210022a62aa4d",
+      "review_subject_digest": "3c0a241f473aae11d7f0b2755565fc1a1fb7699305ce5696c5c097e44c523f75",
+      "active": true,
+      "report_path": "verification/reports/MERGE_STATE_MISSING_PARENT_FIXTURE_20261026.json"
+    },
+    {
+      "id": "POST_MERGE_VERIFICATION-MISSING-PARENT-FIXTURE-.GITHUB-20261026",
+      "type": "POST_MERGE_VERIFICATION",
+      "producer": "POST_MERGE_WORKFLOW",
+      "role": "POST_MERGE_WORKFLOW",
+      "authority": "MANUAL_AUTHORITY",
+      "created_at": "2026-10-26T08:04:02.095381+00:00",
+      "verdict": "PASS",
+      "commit_sha": "00bf6e758f90351a44cdede9587210022a62aa4d",
+      "merge_commit_sha": "00bf6e758f90351a44cdede9587210022a62aa4d",
+      "review_subject_digest": "3c0a241f473aae11d7f0b2755565fc1a1fb7699305ce5696c5c097e44c523f75",
+      "active": true,
+      "report_path": "verification/reports/POST_MERGE_VERIFICATION_MISSING_PARENT_FIXTURE_20261026.json"
     }
   ],
   "remediation_inputs": [
@@ -465,5 +493,6 @@
     "Owner-authorized append-only persistence of FBR-WTR-001-POSITIVE-PATH-FALLBACK-FINAL-20261004: technical ACCEPTED bound to material 747df9cca3ae27d14f8587b28c6666d65ff7bdac and digest 0d7b3c31e71ef0264a8b8fe031085e8adac3626b0f5f84213d1859b2d3f4c524. Historical reports remain unchanged and historical failed Fresh BREAKER state evidence remains inactive. READY_FOR_OWNER_ACCEPTANCE is technical readiness only; hosting controls, Owner Acceptance, merge/post-merge, GATE-000 PASS, PHASE-000 completion and PHASE-001 authorization are not performed.",
     "SHARED-FB-001 new material work reopens the exact PR subject through BUILDER. No Fresh Breaker, Owner or merge authority is asserted.",
     "SHARED-FB-001 Builder evidence binds new material 174b3f711a34ec02351b20a9a508c1fa3fd95d24; prior Builder/Owner/Fresh Breaker evidence inactive for this digest. Full history checked; no independent acceptance or merge."
-  ]
+  ],
+  "resulting_merge_commit_sha": "00bf6e758f90351a44cdede9587210022a62aa4d"
 }
